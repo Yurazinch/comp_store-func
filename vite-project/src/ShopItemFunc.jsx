@@ -1,18 +1,19 @@
-export const ShopItemFunc = (props) => {
+export const ShopItemFunc = ({item}) => {
+    const {brand, title, description, descriptionFull, currency, price} = item;
     return (
-        <div class="main-content">
-            <h2>{props.brand}</h2>
-            <h1>{props.title}</h1>
-            <h3>{props.description}</h3>
-            <div class="description">
-                {props.descriptionFull}
+        <div className="main-content">
+            <h2>{brand}</h2>
+            <h1>{title}</h1>
+            <h3>{description}</h3>
+            <div className="description">
+                {descriptionFull}
             </div>
-            <div class="highlight-window mobile">
-                <div class="highlight-overlay"></div>
+            <div className="highlight-window mobile">
+                <div className="highlight-overlay"></div>
             </div>
-            <div class="divider"></div>
-            <div class="purchase-info">
-                <div class="price">{props.currency}{props.price}</div>
+            <div className="divider"></div>
+            <div className="purchase-info">
+                <div className="price">{currency}{price}</div>
                 <button>Добавить в корзину</button>
             </div>
         </div>
